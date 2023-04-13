@@ -33,8 +33,11 @@ def getInput():
     messagebox.showinfo(f"{name}",f"{answer}")
 
     textArea.insert(tk.END , answer)
+
+
 button = tk.Button(window , text = "Calculate age ",command = getInput ,bg = "red")
 button.grid(column = 5 , row = 10)
+
 
 
 
