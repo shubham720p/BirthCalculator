@@ -27,7 +27,6 @@ def getInput():
                                       int(monthEntry.get()),
                                       int(dateEntry.get())))
 
-
     textArea =tk.Text(master =window ,height = 10 , width = 25)
     # textArea.grid(column = 12, row = 11)
     answer = " Hey {key} you are {age} years old .".format(key = name , age = key.age())
@@ -38,6 +37,8 @@ button = tk.Button(window , text = "Calculate age ",command = getInput ,bg = "re
 button.grid(column = 5 , row = 10)
 
 
+
+
 class Person :
     def __init__(self , name , birthdate):
         self.name = name
@@ -46,6 +47,10 @@ class Person :
         today = datetime.date.today()
         age = today.year-self.birthdate.year
         return age
+    def days(self):
+        today = datetime.date.today()
+        days= today.year-self.birthdate.year
+        return days
 
 
 window.mainloop()
